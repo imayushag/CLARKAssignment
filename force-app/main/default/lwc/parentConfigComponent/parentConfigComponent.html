@@ -1,0 +1,23 @@
+<template>
+        <div class="slds-card slds-theme_shade" if:true={isStatusClosed}>
+          <div class="slds-card__header slds-grid">
+            <div class="slds-notify slds-notify_alert slds-alert_warning" role="alert">
+              <span class="slds-assistive-text">warning</span>
+              <span class="slds-icon_container slds-icon-utility-warning slds-m-right_x-small"
+                title="Description of icon when needed">
+                <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                </svg>
+              </span>
+              <h2>The Case is closed, and no further Config records can be added. Therefore, Case Configs cannot be sent.</h2>
+            </div>
+          </div>
+        </div>
+      
+    <div class="slds-box slds-theme_default">
+        <c-available-configs onsendconfigs={handleConfigs} record-id={recordId}
+        is-case-closed={isStatusClosed}></c-available-configs>
+        <c-case-configs record-id={recordId}
+        is-case-closed={isStatusClosed}></c-case-configs>
+    
+    </div>
+</template>

@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Case Configs"
+    icon-name="standard:product_required">
+        <div class="slds-box slds-theme_default">
+            <!--Case Configs Data with sorting-->
+            <lightning-datatable
+                    key-field="Id"
+                    data={data}
+                    columns={columns}
+                    sorted-by={sortBy}
+                    sorted-direction={sortDirection}
+                    onsort={doSorting}
+                    hide-checkbox-column="true"
+                    show-row-number-column="true">
+            </lightning-datatable>
+            <!--Send button-->
+            <div class="slds-m-around_medium">
+                <lightning-button variant="brand" label="Send" onclick={handleClick} disabled={disableButton} class="slds-m-left_x-small"></lightning-button>
+                    </div>
+        </div>
+    </lightning-card>
+</template>
