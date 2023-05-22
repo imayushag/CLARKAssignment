@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Change_Status_of_Closed_Cases</fullName>
+    <active>true</active>
+    <description>This VR restricts user to modify case status once it is closed.</description>
+    <errorConditionFormula>AND(
+
+ISCHANGED(Status),
+
+ISPICKVAL(PRIORVALUE(Status),&quot;Closed&quot;)
+
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>You cannot Change Status of Closed Case.</errorMessage>
+</ValidationRule>
