@@ -1,4 +1,3 @@
-
 public with sharing class CaseConfigController {
     @AuraEnabled
     public static List<Case_Config__c> getCaseConfigs(String caseId){
