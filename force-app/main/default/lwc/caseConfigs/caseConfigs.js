@@ -54,7 +54,7 @@ export default class CaseConfigs extends LightningElement {
                         variant: 'success'
                     });
                     this.dispatchEvent(event);
-                    window.location.reload();
+                    setTimeout(()=>{window.location.reload()},1500);
                 }
                 else{
                     const event = new ShowToastEvent({
