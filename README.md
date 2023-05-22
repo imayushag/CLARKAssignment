@@ -43,7 +43,7 @@ Task 12-> Prevent further addition of Configs and disable Sending Case Configs w
 
 Task 13-> Do cosmetic changes on the UI. Make it more presentable.
 
-Task 14-> Creating Test Class. Achieved 96.5% code coverage. No Errors, with System.assertequals statements. 
+Task 14-> Creating Test Class. Achieved 90%+ code coverage. No Errors, with System.assertequals statements. 
 
 Task 15-> Do an end-to-end unit testing with positive and negative scenarios in mind.
 
