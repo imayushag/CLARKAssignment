@@ -2,7 +2,6 @@
 public with sharing class CaseConfigController {
     @AuraEnabled
     public static List<Case_Config__c> getCaseConfigs(String caseId){
-        System.debug('Case Id=====>>  '+caseId);
         return [SELECT Id, Label__c, Type__c, Amount__c FROM Case_Config__c where Case__c=:caseId WITH SECURITY_ENFORCED];    
     }
     @AuraEnabled
@@ -28,11 +27,7 @@ public with sharing class CaseConfigController {
                 req.setMethod('POST');
                 req.setHeader('Content-Type', 'application/json');
                 req.setBody(JSON.serialize(requestPayload));
-
-                System.debug('JSON request====>>>'+requestPayload);
-
                 HttpResponse res = new Http().send(req);
-                System.debug('Response====>>>>>>'+res);
                 if (res.getStatusCode() != 200) {
                     throw new CalloutException('Error: ' + res.getStatus() + ' ' + res.getStatusCode());
                 }
@@ -46,7 +41,6 @@ public with sharing class CaseConfigController {
                     Database.update(caseRec);
                 }
             }
-            System.debug('Status returned====>>>>'+isSuccessful);
             return isSuccessful;
         }
             catch(Exception e) {

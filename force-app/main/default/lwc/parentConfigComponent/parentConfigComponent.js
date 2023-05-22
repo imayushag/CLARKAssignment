@@ -7,7 +7,6 @@ export default class ParentConfigComponent extends LightningElement {
 
     @api recordId;
     handleConfigs(event){
-        console.log('event from available configs',event);
         this.template.querySelector("c-case-configs").catchEvent();
     }
 

@@ -8,7 +8,7 @@ Task 0-> Create a Profile e.g. Consultant which will be our end user profile.
 
 Task 1-> Setup Data Model. Create Config and Case Config objects and its fields. Make Case Config Name field as Auto Number type to help in identifying. Assign Object, Field level permissions to Consultant and System Admin profiles. 
 
-Task 2-> Create Client side (LWC) and Server Side (Apex classes) as per the requirement. I have used a Parent component on top of two expected components (Available Configs and Case Configs). Expose both child components(Available Configs and Case Configs) on UI. For Apex controllers, verify field level, object level permissions.
+Task 2-> Create Client side (LWC) and Server Side (Apex classes) as per the requirement. I have used a Parent component on top of two expected components (Available Configs and Case Configs). For Apex controllers, verify field level, object level permissions.
 
 Task 3-> Apply best practices in the code base.
 

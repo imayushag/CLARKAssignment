@@ -33,16 +33,13 @@ export default class CaseConfigs extends LightningElement {
     @api catchEvent(){
         getCaseConfigs({caseId:this.recordId}).then(result=>{
             this.data=result;
-            console.log('Data retrieved ===>>',this.data.length);
         })
         .catch(error => {
             this.error = error;
-            console.log('Caught error');
         });
     }
 
     get disableButton(){
-        console.log('Disable value+++++',this.data.length);
         return this.data.length===0||this.isCaseClosed;
     }
 

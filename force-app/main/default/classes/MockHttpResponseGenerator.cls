@@ -1,3 +1,4 @@
+@isTest
 public class MockHttpResponseGenerator implements HttpCalloutMock {
     private static final String CONTENT_TYPE = 'application/json';
     private static final String RESPONSE_BODY = '{"success": true}';
